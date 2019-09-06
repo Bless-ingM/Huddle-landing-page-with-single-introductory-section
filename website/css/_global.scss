@@ -1,0 +1,64 @@
+*,*:Before, *:After {
+    box-sizing: border;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+a,a:visited{
+    text-decoration: none;
+}
+body{
+    font-family: $font-body;
+    font-size: 16px;
+}
+
+header{
+    margin-bottom: 50px;
+
+    @media screen and (min-width:1064px){
+       margin-bottom: 90px; 
+    }
+    img {
+        width: 120px;
+
+        @media screen and (min-width:1064px){
+            width: 200px;
+        }
+    }
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+
+    @media screen and (min-width:1064px) {
+        justify-content: flex-end;
+    }
+
+    > a{
+        margin-right: 16px;
+        transform: translateY(0px);
+        translate: transform 900ms ease-in-out;
+        
+        &:last-child{
+            margin-right: 0;
+        }
+
+        &:hover{
+            transform: translateY(-3px);
+        }
+    }
+
+    i.fab {
+        border:1px solid #ffffff;
+        width: 40px;
+        color: #fff;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%; 
+    }  
+}
